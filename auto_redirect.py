@@ -1,12 +1,12 @@
 import requests
 
-url = 'http://vudu.com'
 payload = '//google.com'
+url = 'http://vudu.com' + payload
 
-r = requests.get(url, payload, timeout=1)
+r = requests.get(url, timeout=1)
 
-print(r.url,"\n")
+print("URL:", r.url,"\n")
 
-print(r.headers, "\n")
-print(r.status_code, "\n")
+print("Headers:", r.headers, "\n")
+print("Status:", r.status_code, "\n")
 
